@@ -6,6 +6,8 @@ func Dangdut() (port string) {
 	port = os.Getenv("PORT")
 	if port == "" {
 		port = ":80"
+	} else if port[0:1] != ":" {
+		port = ":" + port
 	}
 	return
 }
@@ -14,6 +16,8 @@ func Koplo() (port string) {
 	port = os.Getenv("PORT")
 	if port == "" {
 		port = ":3000"
+	} else if port[0:1] != ":" {
+		port = ":" + port
 	}
 	return
 }

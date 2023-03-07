@@ -1,7 +1,9 @@
 package musik
 
 import (
+	"math/rand"
 	"strings"
+	"time"
 )
 
 func NumberStringToHari(number string) (namahari string) {
@@ -23,4 +25,15 @@ func KelasNumberToAbjad(number string) (kelas string) {
 func NormalizeString(message string) (m string) {
 	m = strings.ToLower(message)
 	return m
+}
+
+func RandomString(n int) string {
+	rand.Seed(time.Now().UnixNano())
+	chars := []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+	length := 8
+	var b strings.Builder
+	for i := 0; i < length; i++ {
+		b.WriteRune(chars[rand.Intn(len(chars))])
+	}
+	return b.String()
 }

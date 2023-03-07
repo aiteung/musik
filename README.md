@@ -1,7 +1,25 @@
 # musik : most valuable helper
 
-Helper to get port from PORT environment in Golang Framework, return port with colon: dangdut, koplo
-also return without colon : tarling
+## PORT
+
+Helper to get port from PORT environment in Golang Framework, default lookup PORT environment variable before
+
+return port withcolon:
+
+```env
+dangdut:80
+koplo:3000
+```
+
+also return without colon :
+
+```env
+tarling80
+```
+
+## GetIPAdredd
+
+GetIPaddress() to get server IP adress to connect to mongodb.com
 
 ## Dev
 

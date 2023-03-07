@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestWacipher(t *testing.T) {
+func TestPort(t *testing.T) {
 	portdangdut := Dangdut()
 	require.Equal(t, ":80", portdangdut)
 

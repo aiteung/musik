@@ -5,7 +5,7 @@ import "os"
 func Dangdut() (port string) {
 	port = os.Getenv("PORT")
 	if port == "" {
-		port = ":80"
+		port = ":8080"
 	} else if port[0:1] != ":" {
 		port = ":" + port
 	}
@@ -15,7 +15,7 @@ func Dangdut() (port string) {
 func Koplo() (port string) {
 	port = os.Getenv("PORT")
 	if port == "" {
-		port = ":3000"
+		port = ":80"
 	} else if port[0:1] != ":" {
 		port = ":" + port
 	}
@@ -25,7 +25,7 @@ func Koplo() (port string) {
 func Tarling() (port string) {
 	port = os.Getenv("PORT")
 	if port == "" {
-		port = "80"
+		port = "8080"
 	}
 	return
 }
